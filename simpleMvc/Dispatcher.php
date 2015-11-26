@@ -9,11 +9,10 @@ class Dispatcher
         $sectionConfigFiles = $this->FindSectionConfigurations();
 
         foreach($sectionConfigFiles as $sectionConfigFile) {
+            // Section config defines $routes
             require($sectionConfigFile);
 
-            $sectionRoutes = routes();
-
-            foreach($sectionRoutes as $route) {
+            foreach($routes as $route) {
                 $route['_rootPath'] = dirname($sectionConfigFile);
 
                 $this->routes[] = $route;

@@ -1,11 +1,9 @@
 <?php
 
-function routes() {
-    return [
-        [
-            'path' => '',
-            'controller' => 'HomeController',
-            'action' => 'ViewAction'
-        ]
-    ];
-}
+$routes = [
+    [
+        'path' => '',
+        'controller' => 'HomeController',
+        'action' => 'ViewAction'
+    ]
+];
