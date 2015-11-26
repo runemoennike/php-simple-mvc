@@ -54,7 +54,8 @@ class Dispatcher
     }
 
     private function BuildRouteRegex($route) {
-        return '/^' . $route['path'] . '$/i';
+        $escapedPath = preg_quote($route['path'], '/');
+        return '/^' . $escapedPath . '$/i';
     }
 
     private function FindSectionConfigurations() {

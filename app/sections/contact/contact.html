@@ -1,0 +1,31 @@
+<h1>Contact Us</h1>
+
+<p>
+    Drop us a file and a note!
+</p>
+
+<?php if(!$this->hasSubmitted) : ?>
+    <form action="contact-us/submit" method="post" enctype="multipart/form-data">
+        <label for="title">Title</label>
+        <input name="title" id="title" required />
+
+        <br/>
+
+        <label for="file">File</label>
+        <input type="file" name="file" id="file" required />
+
+        <br/>
+
+        <label for="description">Description</label>
+        <textarea name="description" id="description"></textarea>
+
+        <br/>
+        <input type="submit" />
+    </form>
+<?php else: ?>
+    <p>Thank you!</p>
+<?php endif; ?>
+
+<footer>
+    <a href="/">Go back.</a>
+</footer>

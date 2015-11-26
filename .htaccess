@@ -3,7 +3,9 @@ Options -Indexes
 RewriteEngine On
 RewriteBase /
 
+# Allow access to any public files e.g. css, js, etc.
 RewriteCond %{REQUEST_URI} "/content"
 RewriteRule (.*) $1 [L]
 
+# Anything else goes to the router.
 RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]

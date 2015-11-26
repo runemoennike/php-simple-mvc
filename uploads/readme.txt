@@ -1,0 +1,1 @@
+For the sake of at least a little bit of order, the uploaded files go in a subfolder instead of just the root :)
