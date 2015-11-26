@@ -1,0 +1,9 @@
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} "/content"
+RewriteRule (.*) $1 [L]
+
+RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]
