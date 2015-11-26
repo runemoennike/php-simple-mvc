@@ -25,6 +25,9 @@ class Dispatcher
 
         if($route != null) {
             $this->RunRoute($route);
+        } else {
+            http_response_code(404);
+            echo('No such route.');
         }
     }
 
